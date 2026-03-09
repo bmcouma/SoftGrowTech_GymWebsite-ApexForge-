@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APEX FORGE — Elite Performance Gym</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ══════════════════════════════════ NAV ══ -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">APEX<span>FORGE</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#facilities">Facilities</a></li>
+    <li><a href="#classes">Classes</a></li>
+    <li><a href="#membership">Pricing</a></li>
+    <li><a href="#trainers">Trainers</a></li>
+    <li><a href="#calculator">BMI Tool</a></li>
+    <li><a href="#join" class="nav-cta">Join Now</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#facilities" onclick="closeMobile()">Facilities</a>
+  <a href="#classes" onclick="closeMobile()">Classes</a>
+  <a href="#membership" onclick="closeMobile()">Pricing</a>
+  <a href="#trainers" onclick="closeMobile()">Trainers</a>
+  <a href="#calculator" onclick="closeMobile()">BMI Tool</a>
+  <a href="#join" onclick="closeMobile()">Join Now</a>
+</div>
+
+<!-- ══════════════════════════════════ HERO ══ -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-stats">
+    <div class="hero-stat-item">
+      <div class="hero-stat-num" data-count="3200">0</div>
+      <div class="hero-stat-lbl">Members</div>
+    </div>
+    <div class="hero-stat-item">
+      <div class="hero-stat-num" data-count="48">0</div>
+      <div class="hero-stat-lbl">Classes/Week</div>
+    </div>
+    <div class="hero-stat-item">
+      <div class="hero-stat-num" data-count="18">0</div>
+      <div class="hero-stat-lbl">Elite Trainers</div>
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">Est. 2019 &nbsp;|&nbsp; Nairobi, Kenya</p>
+    <h1 class="hero-title">
+      TRAIN<br>
+      <span class="line2">BEYOND</span><br>
+      LIMITS
+    </h1>
+    <p class="hero-sub">
+      Elite performance training, world-class facilities, and expert coaching — all under one roof.
+      Your transformation starts today.
+    </p>
+    <div class="hero-actions">
+      <a href="#join" class="btn-primary">Start Free Trial</a>
+      <a href="#facilities" class="btn-outline">Explore Facilities</a>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ MARQUEE ══ -->
+<div class="marquee-wrap">
+  <div class="marquee-track" id="marqueeTrack">
+    <span class="marquee-item">Strength Training <span class="marquee-dot"></span></span>
+    <span class="marquee-item">HIIT Classes <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Olympic Lifting <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Recovery &amp; Wellness <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Nutrition Coaching <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Yoga &amp; Mobility <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Cardio Zone <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Boxing &amp; Combat <span class="marquee-dot"></span></span>
+    <!-- Repeat for seamless scroll -->
+    <span class="marquee-item">Strength Training <span class="marquee-dot"></span></span>
+    <span class="marquee-item">HIIT Classes <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Olympic Lifting <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Recovery &amp; Wellness <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Nutrition Coaching <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Yoga &amp; Mobility <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Cardio Zone <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Boxing &amp; Combat <span class="marquee-dot"></span></span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════ ABOUT ══ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <img
+          src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=700&q=80"
+          alt="Gym training"
+          class="about-img"
+        />
+        <div class="about-img-badge">
+          <span class="num">5+</span>
+          <span class="txt">Years of<br>Excellence</span>
+        </div>
+      </div>
+      <div class="about-text reveal reveal-delay-2">
+        <span class="label">Who We Are</span>
+        <h2>Built for the<br>Relentless Few</h2>
+        <p>Apex Forge is not a place you pass through. It is where you are remade. Our facility was designed from the ground up for athletes, beginners, and everyone in between who shares one thing: the refusal to settle.</p>
+        <p>We combine premium equipment, science-backed programming, and a community that pushes you harder than you ever would alone. Every square meter of this space was built with purpose.</p>
+        <div class="stats-row">
+          <div class="stat-box">
+            <div class="stat-num counter" data-target="3200">0</div>
+            <div class="stat-lbl">Active Members</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num counter" data-target="18">0</div>
+            <div class="stat-lbl">Expert Trainers</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num counter" data-target="48">0</div>
+            <div class="stat-lbl">Weekly Classes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ FACILITIES ══ -->
+<section id="facilities" style="padding:7rem 0;">
+  <div class="container" style="padding:0 4rem; margin-bottom:3rem;">
+    <div class="section-header reveal">
+      <span class="label">What We Offer</span>
+      <h2>World-Class<br>Facilities</h2>
+    </div>
+  </div>
+  <div class="facilities-grid">
+    <div class="facility-card wide reveal">
+      <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=1200&q=80" alt="Main Gym Floor" class="facility-img" />
+      <div class="facility-info">
+        <div class="facility-icon">🏋️</div>
+        <div class="facility-name">Main Training Floor</div>
+        <div class="facility-desc">Over 800 sqm of premium free weights, cable machines, barbells, and functional training rigs from Rogue and Life Fitness.</div>
+        <div class="facility-tag">2000 sqft</div>
+      </div>
+    </div>
+    <div class="facility-card reveal reveal-delay-1">
+      <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?w=700&q=80" alt="Cardio Zone" class="facility-img" />
+      <div class="facility-info">
+        <div class="facility-icon">🏃</div>
+        <div class="facility-name">Cardio Zone</div>
+        <div class="facility-desc">Treadmills, assault bikes, rowers, and ski ergs with integrated TV screens and personal fans.</div>
+        <div class="facility-tag">60+ Machines</div>
+      </div>
+    </div>
+    <div class="facility-card reveal reveal-delay-1">
+      <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=700&q=80" alt="Boxing Ring" class="facility-img" />
+      <div class="facility-info">
+        <div class="facility-icon">🥊</div>
+        <div class="facility-name">Boxing Studio</div>
+        <div class="facility-desc">Dedicated ring, heavy bags, speed bags, and coaching available daily. All skill levels welcome.</div>
+        <div class="facility-tag">Full Ring</div>
+      </div>
+    </div>
+    <div class="facility-card reveal reveal-delay-2">
+      <img src="https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?w=700&q=80" alt="Yoga Studio" class="facility-img" />
+      <div class="facility-info">
+        <div class="facility-icon">🧘</div>
+        <div class="facility-name">Yoga &amp; Mobility</div>
+        <div class="facility-desc">Serene studio with sprung flooring, mirrors, and climate control. Daily classes for all levels.</div>
+        <div class="facility-tag">Daily Sessions</div>
+      </div>
+    </div>
+    <div class="facility-card reveal reveal-delay-2">
+      <img src="https://images.unsplash.com/photo-1560073743-8aca5f675abc?w=700&q=80" alt="Recovery Lounge" class="facility-img" />
+      <div class="facility-info">
+        <div class="facility-icon">❄️</div>
+        <div class="facility-name">Recovery Lounge</div>
+        <div class="facility-desc">Ice baths, infrared sauna, and foam rolling area. Because recovery is training too.</div>
+        <div class="facility-tag">Members Only</div>
+      </div>
+    </div>
+    <div class="facility-card reveal reveal-delay-3">
+      <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=700&q=80" alt="Performance Pool" class="facility-img" />
+      <div class="facility-info">
+        <div class="facility-icon">🏊</div>
+        <div class="facility-name">Lap Pool</div>
+        <div class="facility-desc">25-metre heated indoor pool. Open swim, aqua aerobics, and coached swim sessions available.</div>
+        <div class="facility-tag">25m Heated</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ CLASSES ══ -->
+<section id="classes">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label">Weekly Schedule</span>
+      <h2>Class<br>Timetable</h2>
+    </div>
+    <div class="schedule-tabs reveal">
+      <button class="tab-btn active" onclick="switchDay('mon', this)">Mon</button>
+      <button class="tab-btn" onclick="switchDay('tue', this)">Tue</button>
+      <button class="tab-btn" onclick="switchDay('wed', this)">Wed</button>
+      <button class="tab-btn" onclick="switchDay('thu', this)">Thu</button>
+      <button class="tab-btn" onclick="switchDay('fri', this)">Fri</button>
+      <button class="tab-btn" onclick="switchDay('sat', this)">Sat</button>
+    </div>
+
+    <div id="schedule-mon" class="schedule-content active reveal">
+      <table class="schedule-table">
+        <thead><tr><th>Time</th><th>Class</th><th>Trainer</th><th>Duration</th><th>Intensity</th><th>Spots</th></tr></thead>
+        <tbody>
+          <tr><td class="class-time">06:00</td><td><span class="class-name">HIIT Ignition</span></td><td>Marcus A.</td><td>45 min</td><td><span class="class-badge badge-intensity-high">High</span></td><td>8 left</td></tr>
+          <tr><td class="class-time">08:30</td><td><span class="class-name">Yoga Flow</span></td><td>Amara S.</td><td>60 min</td><td><span class="class-badge badge-intensity-low">Low</span></td><td>12 left</td></tr>
+          <tr><td class="class-time">10:00</td><td><span class="class-name">Olympic Lifting</span></td><td>Viktor K.</td><td>90 min</td><td><span class="class-badge badge-intensity-high">High</span></td><td>4 left</td></tr>
+          <tr><td class="class-time">12:00</td><td><span class="class-name">Core &amp; Conditioning</span></td><td>Fatima O.</td><td>30 min</td><td><span class="class-badge badge-intensity-mid">Medium</span></td><td>Open</td></tr>
+          <tr><td class="class-time">17:00</td><td><span class="class-name">Boxing Fundamentals</span></td><td>Darius C.</td><td>60 min</td><td><span class="class-badge badge-intensity-high">High</span></td><td>6 left</td></tr>
+          <tr><td class="class-time">19:00</td><td><span class="class-name">Mobility &amp; Stretch</span></td><td>Amara S.</td><td>45 min</td><td><span class="class-badge badge-intensity-low">Low</span></td><td>Open</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="schedule-tue" class="schedule-content reveal">
+      <table class="schedule-table">
+        <thead><tr><th>Time</th><th>Class</th><th>Trainer</th><th>Duration</th><th>Intensity</th><th>Spots</th></tr></thead>
+        <tbody>
+          <tr><td class="class-time">06:00</td><td><span class="class-name">Strength Fundamentals</span></td><td>Viktor K.</td><td>60 min</td><td><span class="class-badge badge-intensity-mid">Medium</span></td><td>Open</td></tr>
+          <tr><td class="class-time">08:00</td><td><span class="class-name">Aqua Aerobics</span></td><td>Leila M.</td><td>45 min</td><td><span class="class-badge badge-intensity-low">Low</span></td><td>Open</td></tr>
+          <tr><td class="class-time">12:00</td><td><span class="class-name">CrossFit WOD</span></td><td>Marcus A.</td><td>60 min</td><td><span class="class-badge badge-intensity-high">High</span></td><td>3 left</td></tr>
+          <tr><td class="class-time">18:00</td><td><span class="class-name">Power Yoga</span></td><td>Amara S.</td><td>75 min</td><td><span class="class-badge badge-intensity-mid">Medium</span></td><td>Open</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="schedule-wed" class="schedule-content reveal">
+      <table class="schedule-table">
+        <thead><tr><th>Time</th><th>Class</th><th>Trainer</th><th>Duration</th><th>Intensity</th><th>Spots</th></tr></thead>
+        <tbody>
+          <tr><td class="class-time">06:00</td><td><span class="class-name">Sprint Intervals</span></td><td>Darius C.</td><td>40 min</td><td><span class="class-badge badge-intensity-high">High</span></td><td>2 left</td></tr>
+          <tr><td class="class-time">09:00</td><td><span class="class-name">Pilates Core</span></td><td>Fatima O.</td><td>55 min</td><td><span class="class-badge badge-intensity-low">Low</span></td><td>8 left</td></tr>
+          <tr><td class="class-time">17:30</td><td><span class="class-name">Kettlebell Circuit</span></td><td>Marcus A.</td><td>45 min</td><td><span class="class-badge badge-intensity-high">High</span></td><td>Open</td></tr>
+          <tr><td class="class-time">19:30</td><td><span class="class-name">Evening Yoga</span></td><td>Amara S.</td><td>60 min</td><td><span class="class-badge badge-intensity-low">Low</span></td><td>Open</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="schedule-thu" class="schedule-content reveal">
+      <table class="schedule-table">
+        <thead><tr><th>Time</th><th>Class</th><th>Trainer</th><th>Duration</th><th>Intensity</th><th>Spots</th></tr></thead>
+        <tbody>
+          <tr><td class="class-time">07:00</td><td><span class="class-name">Olympic Lifting</span></td><td>Viktor K.</td><td>90 min</td><td><span class="class-badge badge-intensity-high">High</span></td><td>5 left</td></tr>
+          <tr><td class="class-time">10:00</td><td><span class="class-name">Senior Fitness</span></td><td>Leila M.</td><td>45 min</td><td><span class="class-badge badge-intensity-low">Low</span></td><td>Open</td></tr>
+          <tr><td class="class-time">18:00</td><td><span class="class-name">HIIT + Boxing</span></td><td>Darius C.</td><td>60 min</td><td><span class="class-badge badge-intensity-high">High</span></td><td>7 left</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="schedule-fri" class="schedule-content reveal">
+      <table class="schedule-table">
+        <thead><tr><th>Time</th><th>Class</th><th>Trainer</th><th>Duration</th><th>Intensity</th><th>Spots</th></tr></thead>
+        <tbody>
+          <tr><td class="class-time">06:00</td><td><span class="class-name">Deadlift Masterclass</span></td><td>Viktor K.</td><td>60 min</td><td><span class="class-badge badge-intensity-high">High</span></td><td>4 left</td></tr>
+          <tr><td class="class-time">08:00</td><td><span class="class-name">Restorative Yoga</span></td><td>Amara S.</td><td>60 min</td><td><span class="class-badge badge-intensity-low">Low</span></td><td>Open</td></tr>
+          <tr><td class="class-time">12:00</td><td><span class="class-name">Friday WOD</span></td><td>Marcus A.</td><td>60 min</td><td><span class="class-badge badge-intensity-high">High</span></td><td>Open</td></tr>
+          <tr><td class="class-time">17:00</td><td><span class="class-name">Weekend Prep Cardio</span></td><td>Fatima O.</td><td>45 min</td><td><span class="class-badge badge-intensity-mid">Medium</span></td><td>Open</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="schedule-sat" class="schedule-content reveal">
+      <table class="schedule-table">
+        <thead><tr><th>Time</th><th>Class</th><th>Trainer</th><th>Duration</th><th>Intensity</th><th>Spots</th></tr></thead>
+        <tbody>
+          <tr><td class="class-time">08:00</td><td><span class="class-name">Saturday Bootcamp</span></td><td>Marcus A.</td><td>75 min</td><td><span class="class-badge badge-intensity-high">High</span></td><td>2 left</td></tr>
+          <tr><td class="class-time">10:00</td><td><span class="class-name">Mindful Movement</span></td><td>Amara S.</td><td>60 min</td><td><span class="class-badge badge-intensity-low">Low</span></td><td>Open</td></tr>
+          <tr><td class="class-time">12:00</td><td><span class="class-name">Open Swim</span></td><td>Leila M.</td><td>90 min</td><td><span class="class-badge badge-intensity-low">Low</span></td><td>Open</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ MEMBERSHIP ══ -->
+<section id="membership">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label">Investment Plans</span>
+      <h2>Choose Your<br>Commitment</h2>
+    </div>
+
+    <div class="billing-toggle reveal">
+      <span class="toggle-label active" id="monthly-label">Monthly</span>
+      <div class="toggle-switch" id="billingToggle" onclick="toggleBilling()">
+        <div class="toggle-knob"></div>
+      </div>
+      <span class="toggle-label" id="annual-label">Annual</span>
+      <span class="save-tag">Save 20%</span>
+    </div>
+
+    <div class="plans-grid reveal">
+      <!-- Starter -->
+      <div class="plan-card">
+        <div class="plan-name">Starter</div>
+        <div class="plan-price">
+          <span class="price-currency">KES</span>
+          <span class="price-num" id="price-starter">2,500</span>
+          <span class="price-period">/mo</span>
+        </div>
+        <hr class="plan-divider">
+        <ul class="plan-features">
+          <li><span class="feature-check">✓</span> Full gym floor access</li>
+          <li><span class="feature-check">✓</span> 4 group classes/month</li>
+          <li><span class="feature-check">✓</span> Locker room access</li>
+          <li><span class="feature-check">✓</span> App &amp; class booking</li>
+          <li class="unavailable"><span class="feature-x">✕</span> Personal training sessions</li>
+          <li class="unavailable"><span class="feature-x">✕</span> Recovery lounge access</li>
+          <li class="unavailable"><span class="feature-x">✕</span> Nutrition consultation</li>
+        </ul>
+        <button class="btn-plan" onclick="document.getElementById('join').scrollIntoView({behavior:'smooth'})">Get Started</button>
+      </div>
+
+      <!-- Elite (featured) -->
+      <div class="plan-card featured">
+        <div class="plan-tag-pop">Most Popular</div>
+        <div class="plan-name">Elite</div>
+        <div class="plan-price">
+          <span class="price-currency">KES</span>
+          <span class="price-num" id="price-elite">4,800</span>
+          <span class="price-period">/mo</span>
+        </div>
+        <hr class="plan-divider">
+        <ul class="plan-features">
+          <li><span class="feature-check">✓</span> Full gym floor access</li>
+          <li><span class="feature-check">✓</span> Unlimited group classes</li>
+          <li><span class="feature-check">✓</span> 2 PT sessions/month</li>
+          <li><span class="feature-check">✓</span> Recovery lounge access</li>
+          <li><span class="feature-check">✓</span> App &amp; priority booking</li>
+          <li><span class="feature-check">✓</span> Nutrition consultation</li>
+          <li class="unavailable"><span class="feature-x">✕</span> Dedicated coach assignment</li>
+        </ul>
+        <button class="btn-plan" onclick="document.getElementById('join').scrollIntoView({behavior:'smooth'})">Get Started</button>
+      </div>
+
+      <!-- Forge (premium) -->
+      <div class="plan-card">
+        <div class="plan-name">Forge Pro</div>
+        <div class="plan-price">
+          <span class="price-currency">KES</span>
+          <span class="price-num" id="price-forge">8,500</span>
+          <span class="price-period">/mo</span>
+        </div>
+        <hr class="plan-divider">
+        <ul class="plan-features">
+          <li><span class="feature-check">✓</span> Everything in Elite</li>
+          <li><span class="feature-check">✓</span> 8 PT sessions/month</li>
+          <li><span class="feature-check">✓</span> Dedicated coach assignment</li>
+          <li><span class="feature-check">✓</span> Monthly body composition scan</li>
+          <li><span class="feature-check">✓</span> Custom meal plan</li>
+          <li><span class="feature-check">✓</span> Guest passes (4/month)</li>
+          <li><span class="feature-check">✓</span> Priority facility booking</li>
+        </ul>
+        <button class="btn-plan" onclick="document.getElementById('join').scrollIntoView({behavior:'smooth'})">Get Started</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ TRAINERS ══ -->
+<section id="trainers">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label">The Team</span>
+      <h2>Meet Your<br>Coaches</h2>
+    </div>
+    <div class="trainers-grid">
+      <div class="trainer-card reveal">
+        <div class="trainer-img-wrap">
+          <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=500&q=80" alt="Marcus" class="trainer-img" />
+        </div>
+        <div class="trainer-name">Marcus Adeyemi</div>
+        <div class="trainer-role">Head of Performance</div>
+        <div class="trainer-tags">
+          <span class="trainer-tag">HIIT</span>
+          <span class="trainer-tag">CrossFit</span>
+          <span class="trainer-tag">Conditioning</span>
+        </div>
+      </div>
+      <div class="trainer-card reveal reveal-delay-1">
+        <div class="trainer-img-wrap">
+          <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=500&q=80" alt="Amara" class="trainer-img" />
+        </div>
+        <div class="trainer-name">Amara Sow</div>
+        <div class="trainer-role">Yoga &amp; Mobility</div>
+        <div class="trainer-tags">
+          <span class="trainer-tag">Yoga</span>
+          <span class="trainer-tag">Pilates</span>
+          <span class="trainer-tag">Mindfulness</span>
+        </div>
+      </div>
+      <div class="trainer-card reveal reveal-delay-2">
+        <div class="trainer-img-wrap">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&q=80" alt="Viktor" class="trainer-img" />
+        </div>
+        <div class="trainer-name">Viktor Kovalev</div>
+        <div class="trainer-role">Olympic Lifting Coach</div>
+        <div class="trainer-tags">
+          <span class="trainer-tag">Weightlifting</span>
+          <span class="trainer-tag">Powerlifting</span>
+          <span class="trainer-tag">Nutrition</span>
+        </div>
+      </div>
+      <div class="trainer-card reveal reveal-delay-3">
+        <div class="trainer-img-wrap">
+          <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500&q=80" alt="Darius" class="trainer-img" />
+        </div>
+        <div class="trainer-name">Darius Cole</div>
+        <div class="trainer-role">Boxing &amp; Combat</div>
+        <div class="trainer-tags">
+          <span class="trainer-tag">Boxing</span>
+          <span class="trainer-tag">Muay Thai</span>
+          <span class="trainer-tag">Cardio</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ BMI CALCULATOR ══ -->
+<section id="calculator">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label">Free Tool</span>
+      <h2>BMI &amp; Health<br>Calculator</h2>
+    </div>
+    <div class="calc-wrap reveal">
+      <div class="calc-inputs">
+        <div class="unit-toggle-row">
+          <button class="unit-btn active" onclick="setUnit('metric', this)">Metric (kg/cm)</button>
+          <button class="unit-btn" onclick="setUnit('imperial', this)">Imperial (lbs/ft)</button>
+        </div>
+
+        <div class="input-group">
+          <label>Age</label>
+          <div class="range-input-wrap">
+            <span class="range-val" id="age-val">28</span>
+            <input type="range" class="range-input" id="age" min="16" max="80" value="28" oninput="updateBMI()">
+          </div>
+        </div>
+        <div class="input-group">
+          <label id="weight-label">Weight (kg)</label>
+          <div class="range-input-wrap">
+            <span class="range-val" id="weight-val">75</span>
+            <input type="range" class="range-input" id="weight" min="30" max="200" value="75" oninput="updateBMI()">
+          </div>
+        </div>
+        <div class="input-group">
+          <label id="height-label">Height (cm)</label>
+          <div class="range-input-wrap">
+            <span class="range-val" id="height-val">175</span>
+            <input type="range" class="range-input" id="height" min="120" max="230" value="175" oninput="updateBMI()">
+          </div>
+        </div>
+
+        <p style="font-size:0.82rem; color: var(--dimmed); margin-top: 0.5rem;">
+          Note: BMI is a general screening tool. Consult a qualified health professional for personalised advice.
+        </p>
+      </div>
+
+      <div class="calc-result">
+        <div class="result-ring" id="resultRing">
+          <div class="result-num" id="bmiNum">22.9</div>
+          <div class="result-unit-label">BMI</div>
+        </div>
+        <div class="result-category" id="bmiCategory">Normal Weight</div>
+        <div class="result-message" id="bmiMessage">You are within a healthy weight range. Keep up the great work and focus on maintaining your fitness level.</div>
+        <div class="bmi-scale">
+          <div class="bmi-seg under"></div>
+          <div class="bmi-seg normal"></div>
+          <div class="bmi-seg over"></div>
+          <div class="bmi-seg obese"></div>
+          <div class="bmi-marker" id="bmiMarker"></div>
+        </div>
+        <div class="bmi-labels">
+          <span>Under</span>
+          <span>Normal</span>
+          <span>Overweight</span>
+          <span>Obese</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ TESTIMONIALS ══ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-header reveal" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem;">
+      <div>
+        <span class="label">Real Stories</span>
+        <h2>Members<br>Speak</h2>
+      </div>
+      <div class="testi-controls">
+        <button class="testi-btn" onclick="slideTesti(-1)">&#8592;</button>
+        <div class="testi-dots" id="testiDots"></div>
+        <button class="testi-btn" onclick="slideTesti(1)">&#8594;</button>
+      </div>
+    </div>
+
+    <div class="testimonials-track-wrap reveal">
+      <div class="testimonials-track" id="testiTrack">
+        <div class="testimonial-card">
+          <div class="testi-quote">"</div>
+          <p class="testi-text">Apex Forge changed how I think about training. The coaches push you, but more importantly they teach you. I lost 18kg in six months and kept it off because I learned to love the process.</p>
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-author">
+            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&q=80" alt="Zara" class="testi-avatar" />
+            <div>
+              <div class="testi-name">Zara Odhiambo</div>
+              <div class="testi-meta">Elite Member · 14 months</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testi-quote">"</div>
+          <p class="testi-text">I have been to gyms in London, Dubai, and Lagos. Apex Forge competes with all of them. The equipment is elite, the staff are professional, and the community keeps me coming back every single day.</p>
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-author">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80" alt="Kevin" class="testi-avatar" />
+            <div>
+              <div class="testi-name">Kevin Mutua</div>
+              <div class="testi-name">Forge Pro · 2 years</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testi-quote">"</div>
+          <p class="testi-text">Viktor's Olympic lifting coaching is world-class. I competed at nationals six months after joining and placed third in my category. The level of programming here is unlike anything I had access to before.</p>
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-author">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80" alt="Nadia" class="testi-avatar" />
+            <div>
+              <div class="testi-name">Nadia Kamau</div>
+              <div class="testi-meta">Forge Pro · Competitive Lifter</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testi-quote">"</div>
+          <p class="testi-text">The recovery lounge alone is worth the membership. After my evening sessions, thirty minutes in the sauna and an ice bath has done more for my recovery than anything else I have ever tried.</p>
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-author">
+            <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?w=100&q=80" alt="Brian" class="testi-avatar" />
+            <div>
+              <div class="testi-name">Brian Otieno</div>
+              <div class="testi-meta">Elite Member · 8 months</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testi-quote">"</div>
+          <p class="testi-text">Amara's yoga classes are transformative. I came in stiff from years of desk work and within three months my flexibility and posture improved so dramatically that my physiotherapist noticed.</p>
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-author">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Grace" class="testi-avatar" />
+            <div>
+              <div class="testi-name">Grace Wanjiru</div>
+              <div class="testi-meta">Starter Member · 5 months</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ JOIN ══ -->
+<section id="join">
+  <div class="container">
+    <div class="join-grid">
+      <div class="join-info reveal">
+        <span class="label">Get Started</span>
+        <h2>Join the<br>Forge Today</h2>
+        <p>Your first 7 days are completely free. No credit card required. Walk in, train hard, and decide after.</p>
+        <ul class="join-perks">
+          <li><span class="perk-icon">✓</span> 7-day free trial, no obligation</li>
+          <li><span class="perk-icon">✓</span> Cancel anytime, no lock-in contracts</li>
+          <li><span class="perk-icon">✓</span> Complimentary fitness assessment on joining</li>
+          <li><span class="perk-icon">✓</span> Guided induction with a certified trainer</li>
+          <li><span class="perk-icon">✓</span> Access to the full APEX app from day one</li>
+        </ul>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">First Name</label>
+              <input type="text" class="form-input" id="fname" placeholder="John" />
+              <span class="form-error" id="fname-err">Required</span>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Last Name</label>
+              <input type="text" class="form-input" id="lname" placeholder="Doe" />
+              <span class="form-error" id="lname-err">Required</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-input" id="femail" placeholder="john@example.com" />
+            <span class="form-error" id="femail-err">Valid email required</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" class="form-input" id="fphone" placeholder="+254 700 000 000" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Membership Plan</label>
+            <select class="form-select" id="fplan">
+              <option value="">Select a plan...</option>
+              <option>Starter — KES 2,500/mo</option>
+              <option>Elite — KES 4,800/mo</option>
+              <option>Forge Pro — KES 8,500/mo</option>
+              <option>Just the Free Trial</option>
+            </select>
+            <span class="form-error" id="fplan-err">Please select a plan</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Your Fitness Goal (optional)</label>
+            <textarea class="form-textarea" id="fgoal" placeholder="Tell us what you want to achieve..."></textarea>
+          </div>
+          <button class="form-submit" onclick="submitForm()">Claim Free Trial</button>
+          <div class="form-success" id="formSuccess">
+            🎉 Welcome to Apex Forge! We will reach out within 24 hours to schedule your induction.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ FOOTER ══ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="nav-logo" style="font-size:2rem;">APEX<span style="color:var(--gold)">FORGE</span></div>
+      <p>Where elite athletes and determined beginners share the same floor, driven by the same ambition. Train here. Change everything.</p>
+      <div class="footer-social">
+        <a href="#" class="social-btn" title="Instagram">IG</a>
+        <a href="#" class="social-btn" title="Twitter">TW</a>
+        <a href="#" class="social-btn" title="YouTube">YT</a>
+        <a href="#" class="social-btn" title="Facebook">FB</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#facilities">Facilities</a></li>
+        <li><a href="#classes">Class Schedule</a></li>
+        <li><a href="#membership">Membership</a></li>
+        <li><a href="#trainers">Trainers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Personal Training</a></li>
+        <li><a href="#">Nutrition Coaching</a></li>
+        <li><a href="#">Group Fitness</a></li>
+        <li><a href="#">Recovery Services</a></li>
+        <li><a href="#">Body Composition</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#">Westlands, Nairobi</a></li>
+        <li><a href="tel:+254700000000">+254 700 000 000</a></li>
+        <li><a href="mailto:hello@apexforge.co.ke">hello@apexforge.co.ke</a></li>
+        <li><a href="#">Mon–Fri: 5:30am – 10pm</a></li>
+        <li><a href="#">Sat–Sun: 7am – 8pm</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 Apex Forge Gym — All rights reserved</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
